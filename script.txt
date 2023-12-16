@@ -1,15 +1,39 @@
-+ Generate a new Angular Project
-+ Set up Supabase Oauth project and grab Project URL and API key
-+ npm install @supabase/supabase-js
-+ integrate the bootstrap 5 CDN
-+ Generate environmental files and integrate API Key and URL. (ng g environments)
-+ Create new app on Github and generate clientID and clientSECRET
-+ Generate project component and service files
-+ configure auth service
-+ Implement the Router
-+ Integrate Bootstrap 5 CDN and design for signin component
-+ Create Navbar
-+ Implement Signin With Github
-+ Implement Signout with Github
-+ Update Navbar based on Login State
-+ Navigate to dashboard based on logged in state
++ Create Page Design
++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
++ Fill Available
+
+-- So there are two things you need to know about this:
+
+ -webkit-fill-available;
+the -webkit part is an extension for browsers such as safari or chrome, you can find more examples here: https://developer.mozilla.org/en-US/docs/Web/CSS/WebKit_Extensions This mean that this code will not work in firefox, to cover every browsers you could use something like that:
+
+elem {
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}
+And the 'fill-available' part means the element will expand to take all available space in it's container. That's why your line stretched.
+
+Hope I could clear it up for you.

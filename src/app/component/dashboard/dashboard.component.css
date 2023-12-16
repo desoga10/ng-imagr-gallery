@@ -1,0 +1,56 @@
+.box {
+    font-size: 0
+}
+
+.box-list {
+    display: inline-block;
+    width: 12.5%;
+    margin: 0;
+    position: relative
+}
+
+.box-list.active:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #2d353c;
+    margin-left: -10px
+}
+
+.box-show {
+    text-align: center;
+    position: relative;
+    background: #2d353c;
+    width: 100%;
+    float: left;
+    padding: 25px;
+    display: none
+}
+
+.box-img {
+    max-width: 100%;
+    width: 100%;
+    cursor: pointer
+}
+
+.box-current-img {
+    -webkit-box-shadow: 0 5px 35px rgba(0, 0, 0, .65);
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .65);
+    max-width: 100%
+}
+
+.box-img:hover {
+    opacity: .8
+}
+
+.box-close {
+    opacity: .7;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 35px;
+    height: 35px
+}
