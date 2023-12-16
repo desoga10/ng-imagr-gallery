@@ -1,0 +1,15 @@
++ Generate a new Angular Project
++ Set up Supabase Oauth project and grab Project URL and API key
++ npm install @supabase/supabase-js
++ integrate the bootstrap 5 CDN
++ Generate environmental files and integrate API Key and URL. (ng g environments)
++ Create new app on Github and generate clientID and clientSECRET
++ Generate project component and service files
++ configure auth service
++ Implement the Router
++ Integrate Bootstrap 5 CDN and design for signin component
++ Create Navbar
++ Implement Signin With Github
++ Implement Signout with Github
++ Update Navbar based on Login State
++ Navigate to dashboard based on logged in state
