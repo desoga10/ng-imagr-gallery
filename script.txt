@@ -8,7 +8,7 @@
 + Loop through Data from backend
 + Construct URL to display Images
 + Create fucntion to display image in modal
-
++ Add deferable views
 
 
 + this.userId() + image.name

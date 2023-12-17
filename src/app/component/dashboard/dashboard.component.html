@@ -5,6 +5,7 @@
       accept="image/x-png,image/jpeg">
     <label for="thumbnail" class="col-form-label"></label>
   </div>
+  @defer{
   <div class="box">
 
     @for (image of this.imageData(); track image?.['name']) {
@@ -17,6 +18,10 @@
     <div>No Images Available</div>
     }
   </div>
+  } @loading (minimum 1s) {
+  <div class="loading">Loading&#8230;</div>
+  }
+
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
@@ -31,3 +36,5 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
