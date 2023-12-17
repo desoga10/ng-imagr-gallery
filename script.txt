@@ -1,15 +1,22 @@
 + Create Page Design
-+
++ Create methods to get and create, and upload photo buckets
++ Check if photo exists in the storage bucket
++ handle selected files
++ Install Unique Identifier (npm install --save-dev @types/uuid)
++ Create Get Selected Photos function 
++ Create service to retrieve all photos
++ Loop through Data from backend
++ Construct URL to display Images
++ Create fucntion to display image in modal
 
 
 
++ this.userId() + image.name
 
 
+https://frhovajmfloriucwnrsu.supabase.co/storage/v1/object/public/photos/dd9a77f0-d0ba-4e14-b99a-723b3e73fcb5/49b7ef32-8f64-4f69-8492-caa3065e4913
 
-
-
-
-
+https://frhovajmfloriucwnrsu.supabase.co/storage/v1/object/public/photos/dd9a77f0-d0ba-4e14-b99a-723b3e73fcb5/49b7ef32-8f64-4f69-8492-caa3065e4913
 
 
 
@@ -37,3 +44,27 @@ elem {
 And the 'fill-available' part means the element will expand to take all available space in it's container. That's why your line stretched.
 
 Hope I could clear it up for you.
+
+
+auth = inject(authService)
+
+signOut(){
+  this.auth.logOut()
+}
+
+
+
+---------------------------------------------------------------------------------------------
+
+UUID PACKAGE
+
+Nothing to do with Angular itself, you can get uuid from one of the popular npm package such as this:
+
+https://www.npmjs.com/package/uuid
+
+The code looks like this:
+
+import * as uuid from 'uuid';
+
+const myId = uuid.v4();
+However, the uuid package does not define a uuid class (type); it just provides utilities for generating and parsing UUIDs as strings, and for converting between string and byte array representations. So you will not be able to use the type system to ensure that values are valid UUIDs.

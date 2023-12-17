@@ -1,24 +1,24 @@
-<div class="container">
+<div class="container mt-5">
+  <div class=" mb-3">
+
+    <input (change)="uploadPhoto($event)" type="file" class="form-control" id="thumbnail"
+      accept="image/x-png,image/jpeg">
+    <label for="thumbnail" class="col-form-label"></label>
+  </div>
   <div class="box">
+
+    @for (image of this.imageData(); track image) {
     <div class="box-list">
-      <img data-bs-toggle="modal" data-bs-target="#exampleModal"
-        src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
+      <img (click)="modalImage(this.urlCDN() + this.userId() + '/' + image?.['name'])" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" [src]="this.urlCDN() + this.userId() + '/' + image?.['name']" alt=""
+        class="box-img">
     </div>
-    <div class="box-list">
-      <img src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
-    </div>
-    <div class="box-list">
-      <img src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
-    </div>
-    <div class="box-list">
-      <img src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
-    </div>
-    <div class="box-list">
-      <img src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
-    </div>
-    <div class="box-list">
-      <img src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="" class="box-img">
-    </div>
+    } @empty {
+    <div>No Images Available</div>
+    }
+
+
+
   </div>
 
 
@@ -32,8 +32,7 @@
           <button #closeModal type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img style="width: -webkit-fill-available;"
-            src="https://res.cloudinary.com/dz4tt9omp/image/upload/v1674315975/6769264_60111.jpg" alt="">
+          <img style="width: -webkit-fill-available;" src={{this.getModalImage()}} alt="">
         </div>
       </div>
     </div>
