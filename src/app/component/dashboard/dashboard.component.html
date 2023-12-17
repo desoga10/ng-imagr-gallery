@@ -7,7 +7,7 @@
   </div>
   <div class="box">
 
-    @for (image of this.imageData(); track image) {
+    @for (image of this.imageData(); track image?.['name']) {
     <div class="box-list">
       <img (click)="modalImage(this.urlCDN() + this.userId() + '/' + image?.['name'])" data-bs-toggle="modal"
         data-bs-target="#exampleModal" [src]="this.urlCDN() + this.userId() + '/' + image?.['name']" alt=""
@@ -16,12 +16,7 @@
     } @empty {
     <div>No Images Available</div>
     }
-
-
-
   </div>
-
-
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
