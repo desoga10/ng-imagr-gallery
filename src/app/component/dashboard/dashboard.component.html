@@ -14,8 +14,6 @@
         data-bs-target="#exampleModal" [src]="this.urlCDN() + this.userId() + '/' + image?.['name']" alt=""
         class="box-img">
     </div>
-    } @empty {
-    <div>No Images Available</div>
     }
   </div>
   } @loading (minimum 1s) {
@@ -28,7 +26,7 @@
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Zoomer</h5>
           <button #closeModal type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
